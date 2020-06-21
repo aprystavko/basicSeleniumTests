@@ -1,1 +1,1 @@
-# basicSeleniumTests
+# Simple selenium tests
