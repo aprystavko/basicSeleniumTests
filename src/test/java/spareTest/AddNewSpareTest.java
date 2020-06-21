@@ -24,14 +24,14 @@ import static pages.ParentPage.configProperties;
  * 2) В инпут Названия аппарата ввести "Каляка Маляка"
  * 3) В дропдауне выбрать "Датчики"
  * 4) Кликнуть на кнопку "Создать"
- * 5) Проверить, что аппарат с комментарием создался" Каляка Маляка"
+ * 5) Проверить, что аппарат с комментарием создался "Каляка Маляка"
  * Postconditions:
  * 1) Удалить аппарат с комментарием "Каляка Маляка"
  */
 
 public class AddNewSpareTest extends ParentTest {
 
-    final String spareName = "Lorem ipsum";
+    final String spareName = "Каляка Маляка";
     final String spareTypeText = "Some data";
 
     @Before

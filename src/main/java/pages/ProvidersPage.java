@@ -11,8 +11,7 @@ import static libs.ActionsWithOurElements.*;
 public class ProvidersPage extends ParentPage {
     protected MainPage mainPage;
 
-
-    public ProvidersPage (WebDriver webDriver) {
+    public ProvidersPage(WebDriver webDriver) {
         super(webDriver, "/dictionary/providers");
         mainPage = new MainPage(webDriver);
     }

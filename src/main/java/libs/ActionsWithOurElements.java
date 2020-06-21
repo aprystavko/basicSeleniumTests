@@ -5,22 +5,18 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static pages.ParentPage.configProperties;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
     static Logger logger;
-    static WebDriverWait webDriverWait20;
 
     public ActionsWithOurElements(WebDriver webDriver) {
         this.webDriver = webDriver;
         logger = Logger.getLogger(getClass());
-//        webDriverWait20 = new WebDriverWait(webDriver, configProperties.TIME_FOR_EXPLICIT_WAIT_LOW());
+
     }
-      /**
+
+    /**
      * Method Enter text in to input and textArea
      *
      * @param input
@@ -44,7 +40,6 @@ public class ActionsWithOurElements {
      */
     public static void clickOnElement(WebElement element) {
         try {
-//            webDriverWait20.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
             logger.info("Element clicked " + element);
         } catch (Exception e) {

@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 public class SpareTypePage extends ParentPage {
     protected MainPage mainPage;
 
-
     public SpareTypePage(WebDriver webDriver) {
         super(webDriver, "/dictionary/spare_type");
         mainPage = new MainPage(webDriver);

@@ -11,7 +11,6 @@ import static libs.ActionsWithOurElements.*;
 public class DealTypePage extends ParentPage {
     protected MainPage mainPage;
 
-
     public DealTypePage(WebDriver webDriver) {
         super(webDriver, "/dictionary/deal_type");
         mainPage = new MainPage(webDriver);

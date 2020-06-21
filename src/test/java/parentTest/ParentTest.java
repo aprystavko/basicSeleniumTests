@@ -8,9 +8,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
 
 import java.io.File;
@@ -43,7 +40,7 @@ public class ParentTest {
         log = Logger.getLogger(getClass());
         setBrowser();
 
-        webDriver.manage().timeouts().implicitlyWait(configProperties.TIME_FOR_DFFAULT_WAIT(), TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(configProperties.TIME_FOR_DEFAULT_WAIT(), TimeUnit.SECONDS);
         webDriver.manage().window().maximize();
         String winHandleBefore = webDriver.getWindowHandle();
         webDriver.switchTo().window(winHandleBefore);

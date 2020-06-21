@@ -11,7 +11,6 @@ import static libs.ActionsWithOurElements.*;
 public class ApparatPage extends ParentPage {
     protected MainPage mainPage;
 
-
     public ApparatPage(WebDriver webDriver) {
         super(webDriver, "/dictionary/apparat");
         mainPage = new MainPage(webDriver);

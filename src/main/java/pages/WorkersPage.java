@@ -11,8 +11,7 @@ import static libs.ActionsWithOurElements.*;
 public class WorkersPage extends ParentPage {
     protected MainPage mainPage;
 
-
-    public WorkersPage (WebDriver webDriver) {
+    public WorkersPage(WebDriver webDriver) {
         super(webDriver, "/dictionary/workers");
         mainPage = new MainPage(webDriver);
     }
@@ -45,9 +44,9 @@ public class WorkersPage extends ParentPage {
     private WebElement workerDeleteeButton;
 
 
-       public void deleteAllWorkersWhenTheyArePresent(String workerSurname, String workerName, String workerMidname) {
+    public void deleteAllWorkersWhenTheyArePresent(String workerSurname, String workerName, String workerMidname) {
         while (isCreatedWorkerPresent(workerSurname, workerName, workerMidname)) {
-              deleteWorker(workerSurname, workerName, workerMidname );
+            deleteWorker(workerSurname, workerName, workerMidname);
         }
     }
 
@@ -55,9 +54,9 @@ public class WorkersPage extends ParentPage {
         String fullUserName = workerSurname + " " + workerName + " " + workerMidname;
         try {
             return isElementPresent(webDriver.findElement(By.xpath(".//*[text()='" + fullUserName + "']")));
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.info(fullUserName + " worker wasn't found");
-            return  false;
+            return false;
         }
     }
 

@@ -26,6 +26,9 @@ public class SparesPage extends ParentPage {
     @FindBy(xpath = ".//button[@name='delete']")
     private WebElement deleteSpareButton;
 
+    @FindBy(xpath = "//button[@name='add']")
+    private WebElement addSpareButton;
+
     public SparesPage(WebDriver webDriver) {
         super(webDriver, "/dictionary/spares");
     }
@@ -33,6 +36,7 @@ public class SparesPage extends ParentPage {
     public void createNewSpare(String spareName, String spareType) {
         clickOnElement(addNewSpare);
         ActionsWithOurElements.enterTextIntoInput(spareNameInput, spareName);
+        ActionsWithOurElements.clickOnElement(addSpareButton);
         WebElement optionValueType = webDriver.findElement(By.xpath(".//option[text()='" + spareType + "'][1]"));
         actionsWithOurElements.selectOptionsInDropDown(spareSelectType, optionValueType);
         clickOnElement(createSpareButon);
@@ -47,9 +51,9 @@ public class SparesPage extends ParentPage {
     public boolean isCreatedSpareIsPresent(String spareName) {
         try {
             return isElementPresent(webDriver.findElement(By.xpath(".//*[text()='" + spareName + "']")));
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.info(spareName + " spare wasn't found");
-            return  false;
+            return false;
         }
     }
 
